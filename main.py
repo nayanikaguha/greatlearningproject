@@ -49,7 +49,7 @@ def train_model(X_train, y_train):
 
 
 def save_model(model):
-    dump(model, "lr_model.joblib")
+    dump(joblib, "gl_project.joblib")
     print("Model saved")
 
 
