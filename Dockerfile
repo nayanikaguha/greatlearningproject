@@ -17,4 +17,4 @@ RUN pip install gunicorn
 EXPOSE 5000
 
 # Use Gunicorn to run the Flask application
-ENTRYPOINT ["gunicorn", "flask_run5:app", "-b", "0.0.0.0:5000"]
+ENTRYPOINT ["gunicorn", "Assignment_file:app", "-b", "0.0.0.0:5000"]
