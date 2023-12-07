@@ -9,6 +9,7 @@ if __name__ == '__main__':
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
+#importing all the important libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -28,7 +29,7 @@ def get_data(base_dir):
         path_file = os.path.join(base_dir, name)
         df = pd.read_csv(r"C:\Users\user\PycharmProjects\pythongreatlearning\Iris\iris.csv")
     return data
-
+#here we load the Iris dataset
 
 def split_data(data, test_size=0.2, random_state=42):
     # Assuming 'target' is the column you want to predict
@@ -51,7 +52,7 @@ def train_model(X_train, y_train):
 def save_model(model):
     dump(joblib, "gl_project.joblib")
     print("Model saved")
-
+#after having trained the logistic regression model on training data we saved the model using using joblib
 
 def create_metrics(X_test, y_test, model):
     model_report = classification_report(y_test, model.predict(X_test))
